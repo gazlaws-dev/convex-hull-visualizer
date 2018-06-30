@@ -4,10 +4,16 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.view.GestureDetectorCompat;
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Horatiu on 18/06/2016.
@@ -87,8 +93,10 @@ public class GridView extends View{
         paint.setColor(Color.parseColor(Settings.EDGE_COLOR));
         paint.setStrokeWidth(Settings.EDGE_WEIGHT); //generate points and then wrap around!
         for(int x = 0; x < hull.getPoints().length-1; x++)
-            canvas.drawLine(hull.getPoints()[x].getX(), hull.getPoints()[x].getY(), hull.getPoints()[x+1].getX(), hull.getPoints()[x+1].getY(), paint);
+            canvas.drawLine(hull.getPoints()[x].getX(), hull.getPoints()[x].getY(), hull.getPoints()[x + 1].getX(), hull.getPoints()[x + 1].getY(), paint);
+
         canvas.drawLine(hull.getPoints()[0].getX(), hull.getPoints()[0].getY(), hull.getPoints()[hull.getPoints().length-1].getX(), hull.getPoints()[hull.getPoints().length-1].getY(), paint); //this is the last line.
+
     }
 
     /** This method refreshes the canvas.
@@ -139,6 +147,7 @@ public class GridView extends View{
         }
 
         //invalidate();
+
     }
 
     /** This method returns the xStart.

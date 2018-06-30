@@ -24,13 +24,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/settings"
-                android:id="@+id/settings"
+                android:text="GiftWrap"
+                android:id="@+id/giftnext"
                 android:background="#7042a5f5"
                 android:layout_gravity="fill_horizontal"
                 android:layout_columnWeight="1"
                 android:paddingRight="5px"
-                android:onClick="settings"
+                android:onClick="nextGiftWrap"
                 />
 
             <Button
@@ -40,11 +40,22 @@
                 android:id="@+id/rest"
                 android:background="#7042a5f5"
                 android:layout_row="0"
-                android:layout_column="18"
                 android:layout_gravity="fill_horizontal"
                 android:layout_columnWeight="1"
                 android:paddingLeft="5px"
                 android:onClick="reset"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graham"
+                android:id="@+id/next"
+                android:background="#7042a5f5"
+                android:layout_row="0"
+                android:layout_gravity="fill_horizontal"
+                android:layout_columnWeight="1"
+                android:paddingLeft="5px"
+                android:onClick="nextGrahamScan"
                 />
         </GridLayout>
     </LinearLayout>
