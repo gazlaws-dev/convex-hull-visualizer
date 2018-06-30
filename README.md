@@ -8,9 +8,10 @@ The purpose of this Android app is to visualize computational geometry algorithm
 * Features color customization and edge/node size
 * Generates convex hull using Graham Scan algorithm in O(NlogN) time
 * JavaDoc Documentation
+* NEW: Includes Grift-Wrapping Algorithm O(N*H)
 
 ## Further Development
-* Include Grift-Wrapping Algorithm O(N*H)
+* Show stack/angle calculations for better understanding
 
 ## Screenshots
 ![Image Unavailable](/screenshots/ScreenshotReadme.png)
